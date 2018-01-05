@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "project for api automatic testing ",
   "scripts": {
-    "api-tests-production": "echo \"Error: no test specified\" && exit 1"
+    "api-tests-production": "newman run tests/API_Automatic_testing.postman_collection.json"
   },
   "author": "Kazi Md. Saidul",
   "dependencies": {
