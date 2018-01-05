@@ -1,0 +1,48 @@
+{
+	"info": {
+		"name": "API_Automatic_testing",
+		"_postman_id": "2d352920-3557-3926-17e3-304fbf8e8f0a",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://jsonplaceholder.typicode.com/posts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "dcaf8cb7-89a2-466a-aeb0-63d42c8cfaf0",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
