@@ -1,0 +1,13 @@
+
+{
+  "name": "api_testing",
+  "version": "1.0.0",
+  "description": "project for api automatic testing ",
+  "scripts": {
+    "api-tests-production": "newman run tests/API_Automatic_testing.postman_collection.json --reporters junit --reporter-junit-export newman.xml"
+  },
+  "author": "Kazi Md. Saidul",
+  "dependencies": {
+    "newman": "^3.9.1"
+  }
+}

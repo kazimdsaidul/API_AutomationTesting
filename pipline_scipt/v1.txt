@@ -1,0 +1,8 @@
+node {
+  
+   stage('Results') {
+    git 'https://github.com/kazimdsaidul/API_AutomationTesting.git'
+    powershell 'npm install'
+    powershell 'npm run api-tests-production'
+   }
+}
