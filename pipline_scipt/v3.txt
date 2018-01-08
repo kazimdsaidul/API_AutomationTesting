@@ -1,0 +1,21 @@
+node {
+   stage('Results') {
+    git 'https://github.com/kazimdsaidul/API_AutomationTesting.git'
+    powershell 'npm install'
+	try{
+	   powershell 'npm run api-tests-production'
+	   currentBuild.result = 'SUCCESS'
+	}catch(Exception ex){
+	   currentBuild.result = 'FAILUARE'
+	}
+	
+	junit 'newman.xml'
+	
+	mail (to: 'nazrulcse6284@gmail.com',
+         subject: "Job '${env.JOB_NAME}' (${env.BUILD_NUMBER}) is waiting for input",
+         body: "Please go to ${env.BUILD_URL}.");
+    
+	
+	
+   }
+}
